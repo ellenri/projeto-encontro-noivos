@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { supabaseApi } from '../lib/supabase';
 
 interface AdminCouple {
@@ -22,7 +22,7 @@ interface MatchResult {
   };
 }
 
-export function DrawResults({ adminCouples, onDrawAgain }: DrawResultsProps) {
+export function DrawResults({ onDrawAgain }: DrawResultsProps) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [matches, setMatches] = useState<MatchResult[]>([]);
