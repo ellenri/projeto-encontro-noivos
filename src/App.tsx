@@ -61,8 +61,8 @@ export function App() {
                   open={open}
                   onClose={handleClose}
                 >
-                  <MenuItem onClick={handleClose} component={Link} to="/">Início</MenuItem>
-                  <MenuItem onClick={handleClose} component={Link} to="/admin">Admin</MenuItem>
+                  <MenuItem onClick={handleClose} component={Link} to="/">Noivos</MenuItem>
+                  <MenuItem onClick={handleClose} component={Link} to="/admin">Equipe</MenuItem>
                   <MenuItem onClick={handleClose} component={Link} to="/resultado">Resultado do Sorteio</MenuItem>
                 </Menu>
               </>
@@ -72,7 +72,7 @@ export function App() {
                   Início
                 </Button>
                 <Button color="inherit" component={Link} to="/admin" sx={{ fontSize: { xs: '0.8rem', sm: '0.875rem' } }}>
-                  Admin
+                  Equipe
                 </Button>
                 <Button color="inherit" component={Link} to="/resultado" sx={{ fontSize: { xs: '0.8rem', sm: '0.875rem' } }}>
                   Resultado do Sorteio

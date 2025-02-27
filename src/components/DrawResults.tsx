@@ -95,7 +95,7 @@ export function DrawResults({ onDrawAgain }: DrawResultsProps) {
 
       <div className="flex flex-col gap-2 mb-6 text-gray-300">
         <div>
-          Total de casais mentores: {Object.keys(matchesByMentor).length}
+          Total de casais da equipe: {Object.keys(matchesByMentor).length}
         </div>
         <div>
           Total de casais de noivos: {matches.length}

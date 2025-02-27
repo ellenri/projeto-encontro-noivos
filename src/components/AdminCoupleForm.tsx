@@ -93,7 +93,7 @@ export function AdminCoupleForm({ onSubmit, onBack, totalEngagedCouples, loading
           fontSize: { xs: '1rem', sm: '1.25rem' } 
         }}
       >
-        Casais Administradores
+        Casais da Equipe
       </Typography>
 
       <Typography 
@@ -187,7 +187,7 @@ export function AdminCoupleForm({ onSubmit, onBack, totalEngagedCouples, loading
             fontSize: { xs: '0.75rem', sm: '0.875rem' }
           }}
         >
-          Adicionar Casal Administrador
+          Adicionar Casal da Equipe
         </Button>
         
         <Box sx={{ display: 'flex', gap: 2, mt: 1 }}>

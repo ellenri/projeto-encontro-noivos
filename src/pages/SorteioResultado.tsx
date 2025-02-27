@@ -74,7 +74,7 @@ export function SorteioResultado() {
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Casal Mentor:</h3>
+                  <h3 className="font-semibold text-lg mb-1">Casal da Equipe:</h3>
                   <p className="text-gray-700">
                     {match.mentor_couples.mentor_couples_name}
                   </p>
