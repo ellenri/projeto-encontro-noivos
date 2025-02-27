@@ -29,6 +29,13 @@ export type MentorshipMatch = {
   created_at: string
 }
 
+interface MatchWithEngagedCouple {
+  engaged_couple_id: string;
+  engaged_couples: {
+    couple_name: string;
+  };
+}
+
 // Funções para interagir com o Supabase
 export const supabaseApi = {
   // Casais de Noivos
@@ -205,10 +212,13 @@ export const supabaseApi = {
           throw matchError;
         }
 
+        // Garantir que matches é um array e cada item tem a estrutura esperada
+        const typedMatches = matches as unknown as MatchWithEngagedCouple[];
+        
         return {
           mentorName: mentor.mentor_couples_name,
           menteeQuantity: mentor.mentee_quantity,
-          assignedCouples: matches.map(match => match.engaged_couples.couple_name)
+          assignedCouples: typedMatches.map(match => match.engaged_couples.couple_name)
         };
       })
     );
