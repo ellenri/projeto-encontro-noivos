@@ -32,9 +32,9 @@ export function Home() {
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
-          gap: 4,
+          gap: { xs: 2, md: 4 },
           minHeight: '80vh',
-          py: 4
+          py: { xs: 2, md: 4 }
         }}
       >
         {/* Content Column */}
@@ -54,7 +54,7 @@ export function Home() {
             gutterBottom
             sx={{ 
               mb: { xs: 2, md: 4 },
-              fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }
+              fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2.125rem' }
             }}
           >
             Itinerário de formação para o Sacramento do matrimônio
@@ -66,7 +66,10 @@ export function Home() {
               component="h2" 
               align="center" 
               gutterBottom
-              sx={{ mb: { xs: 2, md: 3 } }}
+              sx={{ 
+                mb: { xs: 2, md: 3 },
+                fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' }
+              }}
             >
               Quais os nomes dos noivos para sorteio?
             </Typography>
@@ -83,13 +86,30 @@ export function Home() {
           sx={{
             flex: 1,
             order: { xs: 1, md: 2 },
-            height: { xs: '30vh', md: 'auto' },
-            backgroundImage: `url(${capaNoivos})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            borderRadius: '16px'
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: { xs: '200px', sm: '250px', md: 'auto' },
+            maxHeight: { xs: '250px', sm: '300px', md: '500px' },
+            position: 'relative',
+            overflow: 'hidden',
+            borderRadius: '16px',
+            mx: { xs: 'auto', md: 0 },
+            width: { xs: '100%', md: 'auto' },
+            maxWidth: '100%'
           }}
-        />
+        >
+          <img 
+            src={capaNoivos} 
+            alt="Casal de noivos" 
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
+          />
+        </Box>
       </Box>
     </Container>
   );

@@ -111,9 +111,9 @@ export function Admin() {
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
-          gap: 4,
+          gap: { xs: 2, md: 4 },
           minHeight: '80vh',
-          py: 4
+          py: { xs: 2, md: 4 }
         }}
       >
         {/* Content Column */}
@@ -149,13 +149,30 @@ export function Admin() {
           sx={{
             flex: 1,
             order: { xs: 1, md: 2 },
-            height: { xs: '30vh', md: 'auto' },
-            backgroundImage: `url(${capaMentores})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            borderRadius: '16px'
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: { xs: '200px', sm: '250px', md: 'auto' },
+            maxHeight: { xs: '250px', sm: '300px', md: '500px' },
+            position: 'relative',
+            overflow: 'hidden',
+            borderRadius: '16px',
+            mx: { xs: 'auto', md: 0 },
+            width: { xs: '100%', md: 'auto' },
+            maxWidth: '100%'
           }}
-        />
+        >
+          <img 
+            src={capaMentores} 
+            alt="Casais mentores" 
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
+          />
+        </Box>
       </Box>
     </Container>
   );
